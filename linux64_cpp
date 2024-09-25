@@ -3,64 +3,64 @@ rm miracl.a
 SGX_CFLAG="-DMR_NO_FILE_IO -DMR_NO_STANDARD_IO -nostdinc -I/opt/intel/sgxsdk/include -I/opt/intel/sgxsdk/include/tlibc -I/opt/intel/sgxsdk/include/libcxx"
 echo $SGX_CFLAG
 cp mirdef.hpp mirdef.h
-g++ -c -m64 -O2 mrcore.c
-g++ -c -m64 -O2 mrarth0.c
-g++ -c -m64 -O2 mrarth1.c
-g++ -c -m64 -O2 mrarth2.c
-g++ -c -m64 -O2 mralloc.c
-g++ -c -m64 -O2 mrsmall.c
-g++ -c -m64 -O2 mrio1.c
-g++ -c -m64 -O2 mrio2.c
-g++ -c -m64 -O2 mrgcd.c
-g++ -c -m64 -O2 mrjack.c
-g++ -c -m64 -O2 mrxgcd.c
-g++ -c -m64 -O2 mrarth3.c
-g++ -c -m64 -O2 mrbits.c
-g++ -c -m64 -O2 mrrand.c
-g++ -c -m64 -O2 mrprime.c
-g++ -c -m64 -O2 mrcrt.c
-g++ -c -m64 -O2 mrscrt.c
-g++ -c -m64 -O2 mrmonty.c
-g++ -c -m64 -O2 mrpower.c
-g++ -c -m64 -O2 mrsroot.c
-g++ -c -m64 -O2 mrcurve.c
-g++ -c -m64 -O2 mrfast.c
-g++ -c -m64 -O2 mrshs.c
-g++ -c -m64 -O2 mrshs256.c
-g++ -c -m64 -O2 mrshs512.c
-g++ -c -m64 -O2 mrsha3.c
-g++ -c -m64 -O2 mrfpe.c
-g++ -c -m64 -O2 mraes.c
-g++ -c -m64 -O2 mrgcm.c
-g++ -c -m64 -O2 mrlucas.c
-g++ -c -m64 -O2 mrzzn2.c
-g++ -c -m64 -O2 mrzzn2b.c
-g++ -c -m64 -O2 mrzzn3.c
-g++ -c -m64 -O2 mrzzn4.c
-g++ -c -m64 -O2 mrecn2.c
-g++ -c -m64 -O2 mrstrong.c
-g++ -c -m64 -O2 mrbrick.c
-g++ -c -m64 -O2 mrebrick.c
-g++ -c -m64 -O2 mrec2m.c
-g++ -c -m64 -O2 mrgf2m.c
-g++ -c -m64 -O2 mrflash.c
-g++ -c -m64 -O2 mrfrnd.c
-g++ -c -m64 -O2 mrdouble.c
-g++ -c -m64 -O2 mrround.c
-g++ -c -m64 -O2 mrbuild.c
-g++ -c -m64 -O2 mrflsh1.c
-g++ -c -m64 -O2 mrpi.c
-g++ -c -m64 -O2 mrflsh2.c
-g++ -c -m64 -O2 mrflsh3.c
-g++ -c -m64 -O2 mrflsh4.c
+g++ -c -m64 -O2 mrcore.c $SGX_CFLAG
+g++ -c -m64 -O2 mrarth0.c $SGX_CFLAG
+g++ -c -m64 -O2 mrarth1.c $SGX_CFLAG
+g++ -c -m64 -O2 mrarth2.c $SGX_CFLAG
+g++ -c -m64 -O2 mralloc.c $SGX_CFLAG
+g++ -c -m64 -O2 mrsmall.c $SGX_CFLAG
+g++ -c -m64 -O2 mrio1.c $SGX_CFLAG
+g++ -c -m64 -O2 mrio2.c $SGX_CFLAG
+g++ -c -m64 -O2 mrgcd.c $SGX_CFLAG
+g++ -c -m64 -O2 mrjack.c $SGX_CFLAG
+g++ -c -m64 -O2 mrxgcd.c $SGX_CFLAG
+g++ -c -m64 -O2 mrarth3.c $SGX_CFLAG
+g++ -c -m64 -O2 mrbits.c $SGX_CFLAG
+g++ -c -m64 -O2 mrrand.c $SGX_CFLAG
+g++ -c -m64 -O2 mrprime.c $SGX_CFLAG
+g++ -c -m64 -O2 mrcrt.c $SGX_CFLAG
+g++ -c -m64 -O2 mrscrt.c $SGX_CFLAG
+g++ -c -m64 -O2 mrmonty.c $SGX_CFLAG
+g++ -c -m64 -O2 mrpower.c $SGX_CFLAG
+g++ -c -m64 -O2 mrsroot.c $SGX_CFLAG
+g++ -c -m64 -O2 mrcurve.c $SGX_CFLAG
+g++ -c -m64 -O2 mrfast.c $SGX_CFLAG
+g++ -c -m64 -O2 mrshs.c $SGX_CFLAG
+g++ -c -m64 -O2 mrshs256.c $SGX_CFLAG
+g++ -c -m64 -O2 mrshs512.c $SGX_CFLAG
+g++ -c -m64 -O2 mrsha3.c $SGX_CFLAG
+g++ -c -m64 -O2 mrfpe.c $SGX_CFLAG
+g++ -c -m64 -O2 mraes.c $SGX_CFLAG
+g++ -c -m64 -O2 mrgcm.c $SGX_CFLAG
+g++ -c -m64 -O2 mrlucas.c $SGX_CFLAG
+g++ -c -m64 -O2 mrzzn2.c $SGX_CFLAG
+g++ -c -m64 -O2 mrzzn2b.c $SGX_CFLAG
+g++ -c -m64 -O2 mrzzn3.c $SGX_CFLAG
+g++ -c -m64 -O2 mrzzn4.c $SGX_CFLAG
+g++ -c -m64 -O2 mrecn2.c $SGX_CFLAG
+g++ -c -m64 -O2 mrstrong.c $SGX_CFLAG
+g++ -c -m64 -O2 mrbrick.c $SGX_CFLAG
+g++ -c -m64 -O2 mrebrick.c $SGX_CFLAG
+g++ -c -m64 -O2 mrec2m.c $SGX_CFLAG
+g++ -c -m64 -O2 mrgf2m.c $SGX_CFLAG
+g++ -c -m64 -O2 mrflash.c $SGX_CFLAG
+g++ -c -m64 -O2 mrfrnd.c $SGX_CFLAG
+g++ -c -m64 -O2 mrdouble.c $SGX_CFLAG
+g++ -c -m64 -O2 mrround.c $SGX_CFLAG
+g++ -c -m64 -O2 mrbuild.c $SGX_CFLAG
+g++ -c -m64 -O2 mrflsh1.c $SGX_CFLAG
+g++ -c -m64 -O2 mrpi.c $SGX_CFLAG
+g++ -c -m64 -O2 mrflsh2.c $SGX_CFLAG
+g++ -c -m64 -O2 mrflsh3.c $SGX_CFLAG
+g++ -c -m64 -O2 mrflsh4.c $SGX_CFLAG
 cp mrmuldv.g64 mrmuldv.c
-g++ -c -m64 -O2 mrmuldv.c
-g++ -c -m64 -O2 big.cpp
-g++ -c -m64 -O2 zzn.cpp
-g++ -c -m64 -O2 ecn.cpp
-g++ -c -m64 -O2 ec2.cpp
-g++ -c -m64 -O2 flash.cpp
-g++ -c -m64 -O2 crt.cpp
+g++ -c -m64 -O2 mrmuldv.c $SGX_CFLAG
+g++ -c -m64 -O2 big.cpp $SGX_CFLAG
+g++ -c -m64 -O2 zzn.cpp $SGX_CFLAG
+g++ -c -m64 -O2 ecn.cpp $SGX_CFLAG
+g++ -c -m64 -O2 ec2.cpp $SGX_CFLAG
+g++ -c -m64 -O2 flash.cpp $SGX_CFLAG
+g++ -c -m64 -O2 crt.cpp $SGX_CFLAG
 ar rc miracl.a mrcore.o mrarth0.o mrarth1.o mrarth2.o mralloc.o mrsmall.o mrzzn2.o mrzzn3.o
 ar r miracl.a mrio1.o mrio2.o mrjack.o mrgcd.o mrxgcd.o mrarth3.o mrbits.o mrecn2.o mrzzn4.o
 ar r miracl.a mrrand.o mrprime.o mrcrt.o mrscrt.o mrmonty.o mrcurve.o mrsroot.o mrzzn2b.o
