@@ -1,0 +1,64 @@
+rm *.exe
+rm miracl.a
+export SGX_CFLAG =  -nostdinc -I/opt/intel/sgxsdk/include -I/opt/intel/sgxsdk/include/tlibc -I/opt/intel/sgxsdk/include/libcxx
+echo $SGX_CFLAG
+gcc -c -m64 -O2 mrcore.c $SGX_CFLAG
+gcc -c -m64 -O2 mrarth0.c $SGX_CFLAG
+gcc -c -m64 -O2 mrarth1.c $SGX_CFLAG
+gcc -c -m64 -O2 mrarth2.c $SGX_CFLAG
+gcc -c -m64 -O2 mralloc.c $SGX_CFLAG
+gcc -c -m64 -O2 mrsmall.c $SGX_CFLAG
+gcc -c -m64 -O2 mrio1.c $SGX_CFLAG
+gcc -c -m64 -O2 mrio2.c $SGX_CFLAG
+gcc -c -m64 -O2 mrgcd.c $SGX_CFLAG
+gcc -c -m64 -O2 mrjack.c $SGX_CFLAG
+gcc -c -m64 -O2 mrxgcd.c $SGX_CFLAG
+gcc -c -m64 -O2 mrarth3.c $SGX_CFLAG
+gcc -c -m64 -O2 mrbits.c $SGX_CFLAG
+gcc -c -m64 -O2 mrrand.c $SGX_CFLAG
+gcc -c -m64 -O2 mrprime.c $SGX_CFLAG
+gcc -c -m64 -O2 mrcrt.c $SGX_CFLAG
+gcc -c -m64 -O2 mrscrt.c $SGX_CFLAG
+gcc -c -m64 -O2 mrmonty.c $SGX_CFLAG
+gcc -c -m64 -O2 mrpower.c $SGX_CFLAG
+gcc -c -m64 -O2 mrsroot.c $SGX_CFLAG
+gcc -c -m64 -O2 mrcurve.c $SGX_CFLAG
+gcc -c -m64 -O2 mrfast.c $SGX_CFLAG
+gcc -c -m64 -O2 mrshs.c $SGX_CFLAG
+gcc -c -m64 -O2 mrshs256.c $SGX_CFLAG
+gcc -c -m64 -O2 mrshs512.c $SGX_CFLAG
+gcc -c -m64 -O2 mrsha3.c $SGX_CFLAG
+gcc -c -m64 -O2 mrfpe.c $SGX_CFLAG
+gcc -c -m64 -O2 mraes.c $SGX_CFLAG
+gcc -c -m64 -O2 mrgcm.c $SGX_CFLAG
+gcc -c -m64 -O2 mrlucas.c $SGX_CFLAG
+gcc -c -m64 -O2 mrzzn2.c $SGX_CFLAG
+gcc -c -m64 -O2 mrzzn2b.c $SGX_CFLAG
+gcc -c -m64 -O2 mrzzn3.c $SGX_CFLAG
+gcc -c -m64 -O2 mrzzn4.c $SGX_CFLAG
+gcc -c -m64 -O2 mrecn2.c $SGX_CFLAG
+gcc -c -m64 -O2 mrstrong.c $SGX_CFLAG
+gcc -c -m64 -O2 mrbrick.c $SGX_CFLAG
+gcc -c -m64 -O2 mrebrick.c $SGX_CFLAG
+gcc -c -m64 -O2 mrec2m.c $SGX_CFLAG
+gcc -c -m64 -O2 mrgf2m.c $SGX_CFLAG
+gcc -c -m64 -O2 mrflash.c $SGX_CFLAG
+gcc -c -m64 -O2 mrfrnd.c $SGX_CFLAG
+gcc -c -m64 -O2 mrdouble.c $SGX_CFLAG
+gcc -c -m64 -O2 mrround.c $SGX_CFLAG
+gcc -c -m64 -O2 mrbuild.c $SGX_CFLAG
+gcc -c -m64 -O2 mrflsh1.c $SGX_CFLAG
+gcc -c -m64 -O2 mrpi.c $SGX_CFLAG
+gcc -c -m64 -O2 mrflsh2.c $SGX_CFLAG
+gcc -c -m64 -O2 mrflsh3.c $SGX_CFLAG
+gcc -c -m64 -O2 mrflsh4.c $SGX_CFLAG
+gcc -c -m64 -O2 mrmuldv.c $SGX_CFLAG
+ar rc miracl.a -nostdlib -L/opt/intel/sgxsdk/lib64 mrcore.o mrarth0.o mrarth1.o mrarth2.o mralloc.o mrsmall.o mrzzn2.o mrzzn3.o
+ar r miracl.a -nostdlib -L/opt/intel/sgxsdk/lib64 mrio1.o mrio2.o mrjack.o mrgcd.o mrxgcd.o mrarth3.o mrbits.o mrecn2.o mrzzn4.o
+ar r miracl.a -nostdlib -L/opt/intel/sgxsdk/lib64 mrrand.o mrprime.o mrcrt.o mrscrt.o mrmonty.o mrcurve.o mrsroot.o mrzzn2b.o
+ar r miracl.a -nostdlib -L/opt/intel/sgxsdk/lib64 mrpower.o mrfast.o mrshs.o mrshs256.o mraes.o mrlucas.o mrstrong.o mrgcm.o    
+ar r miracl.a -nostdlib -L/opt/intel/sgxsdk/lib64 mrflash.o mrfrnd.o mrdouble.o mrround.o mrbuild.o
+ar r miracl.a -nostdlib -L/opt/intel/sgxsdk/lib64 mrflsh1.o mrpi.o mrflsh2.o mrflsh3.o mrflsh4.o 
+ar r miracl.a -nostdlib -L/opt/intel/sgxsdk/lib64 mrbrick.o mrebrick.o mrec2m.o mrgf2m.o mrmuldv.o mrshs512.o mrsha3.o mrfpe.o
+rm mr*.o
+
