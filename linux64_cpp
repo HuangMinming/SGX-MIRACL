@@ -42,7 +42,7 @@ g++ -c -m64 -O2 mrstrong.c $SGX_CFLAG
 g++ -c -m64 -O2 mrbrick.c $SGX_CFLAG
 g++ -c -m64 -O2 mrebrick.c $SGX_CFLAG
 g++ -c -m64 -O2 mrec2m.c $SGX_CFLAG
-g++ -c -m64 -O2 mrgf2m.c $SGX_CFLAG
+#g++ -c -m64 -O2 mrgf2m.c $SGX_CFLAG
 g++ -c -m64 -O2 mrflash.c $SGX_CFLAG
 g++ -c -m64 -O2 mrfrnd.c $SGX_CFLAG
 g++ -c -m64 -O2 mrdouble.c $SGX_CFLAG
@@ -67,7 +67,7 @@ ar r miracl.a mrrand.o mrprime.o mrcrt.o mrscrt.o mrmonty.o mrcurve.o mrsroot.o 
 ar r miracl.a mrpower.o mrfast.o mrshs.o mrshs256.o mraes.o mrlucas.o mrstrong.o mrgcm.o    
 ar r miracl.a mrflash.o mrfrnd.o mrdouble.o mrround.o mrbuild.o
 ar r miracl.a mrflsh1.o mrpi.o mrflsh2.o mrflsh3.o mrflsh4.o 
-ar r miracl.a mrbrick.o mrebrick.o mrec2m.o mrgf2m.o mrmuldv.o mrshs512.o  mrsha3.o mrfpe.o
+ar r miracl.a mrbrick.o mrebrick.o mrec2m.o mrmuldv.o mrshs512.o  mrsha3.o mrfpe.o
 ar r miracl.a big.o zzn.o ecn.o ec2.o flash.o crt.o
 rm mr*.o
 
