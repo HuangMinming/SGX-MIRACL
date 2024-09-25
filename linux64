@@ -2,6 +2,7 @@
 rm miracl.a
 SGX_CFLAG="-DMR_NO_FILE_IO -DMR_NO_STANDARD_IO -nostdinc -I/opt/intel/sgxsdk/include -I/opt/intel/sgxsdk/include/tlibc -I/opt/intel/sgxsdk/include/libcxx"
 echo $SGX_CFLAG
+cp mirdef.h64 mirdef.h
 gcc -c -m64 -O2 mrcore.c $SGX_CFLAG
 gcc -c -m64 -O2 mrarth0.c $SGX_CFLAG
 gcc -c -m64 -O2 mrarth1.c $SGX_CFLAG
@@ -52,6 +53,7 @@ gcc -c -m64 -O2 mrpi.c $SGX_CFLAG
 gcc -c -m64 -O2 mrflsh2.c $SGX_CFLAG
 gcc -c -m64 -O2 mrflsh3.c $SGX_CFLAG
 gcc -c -m64 -O2 mrflsh4.c $SGX_CFLAG
+cp mrmuldv.g64 mrmuldv.c
 gcc -c -m64 -O2 mrmuldv.c $SGX_CFLAG
 ar rc miracl.a mrcore.o mrarth0.o mrarth1.o mrarth2.o mralloc.o mrsmall.o mrzzn2.o mrzzn3.o
 ar r miracl.a mrio1.o mrio2.o mrjack.o mrgcd.o mrxgcd.o mrarth3.o mrbits.o mrecn2.o mrzzn4.o
